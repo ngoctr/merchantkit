@@ -42,6 +42,10 @@ public struct Purchase : Hashable, CustomStringConvertible {
         return self.source.skProduct.localizedDescription
     }
     
+    public var skProduct: SKProduct {
+        return self.source.skProduct
+    }
+
     /// Describes the terms of the subscription purchase, such as renewal period and any introductory offers. Returns nil for non-subscription purchases.
     @available(iOS 11.2, macOS 10.13.2, *)
     public var subscriptionTerms: SubscriptionTerms? {
